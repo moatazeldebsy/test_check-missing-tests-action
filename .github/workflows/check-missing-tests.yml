@@ -9,6 +9,8 @@ on:
 jobs:
   check-missing-tests:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write  # Add this line to ensure the token has write permissions for issues
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
